@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title  %}My Website {% endblock %}</title>
+</head>
+<body>
+<header>
+    <h1>
+{% block header %} Welcome to Alora{% endblock %}
+</h1>
+<nav>
+    <ul>
+        <li><a href="{% url 'my_index' %}">Home</a></li>
+        <li><a href="{% url 'my_about' %}">About Alora</a></li>
+        <li><a href="{% url 'my_contact' %}">Contact us</a></li>
+        <li><a href="{% url 'my_gallery' %}">Alora gallery</a></li>
+    </ul>
+
+</nav>
+</header>
+
+<main>
+    {% block content%} {% endblock%}
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Alora</p>
+    </footer>
+
+</body>
+</html>
